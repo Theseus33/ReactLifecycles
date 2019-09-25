@@ -8,6 +8,9 @@ class Timer extends Component {
     }
     componentDidMount() {
         console.log("IN COMPONENT DID MOUNT");
+        this.timerID = setInterval(() => {
+            this.setState({ time: new Date() });
+        }, 1000);
     }
     render() {
         console.log("IN RENDER");

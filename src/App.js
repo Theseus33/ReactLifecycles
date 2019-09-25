@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import lDataLoader from "./Dataloader";
 import './App.css';
-import Timer from './Timer.js';
+import Timer from './Timer';
 
 class App extends Component {
 
   render() {
     return (
-
-      <Timer />
-    )
+      <div className="App">
+        <h1>TIMER</h1>
+        <Timer />
+      </div>
+    );
   }
 }
 
