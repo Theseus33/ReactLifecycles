@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./ZenQuote.css";
 
 class ZenQuote extends Component {
     constructor(props) {
@@ -9,13 +10,19 @@ class ZenQuote extends Component {
     componentDidMount() {
         //load data
         axios.get("https://api.github.com/zen").then(response => {
-            this.setState({ quote: response.data })
+            setTimeout(
+                function () {
+                    this.setState({ quote: response.data })
+                }.bind(this),
+                3000
+            );
         });
         //set state with the data
     }
     render() {
         return (
             <div>
+                <div className="loader"></div>
                 <h1>Always Remember...</h1>
                 <p>{this.state.quote}</p>
 
