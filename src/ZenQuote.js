@@ -19,6 +19,9 @@ class ZenQuote extends Component {
         });
         //set state with the data
     }
+    componentDidUpdate() {
+        console.log("INISDE COMPONENT DID UPDATE")
+    }
     render() {
         return (
             <div>
